@@ -1,4 +1,4 @@
-group 'com.540deg'
+group 'com.deg540'
 version '1.0'
 
 apply plugin: 'java'

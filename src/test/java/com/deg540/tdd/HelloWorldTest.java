@@ -1,3 +1,5 @@
+package com.deg540.tdd;
+
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
