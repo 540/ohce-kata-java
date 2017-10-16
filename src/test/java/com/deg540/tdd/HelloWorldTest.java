@@ -3,6 +3,7 @@ package com.deg540.tdd;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
@@ -19,6 +20,6 @@ public class HelloWorldTest {
     public void helloName2() throws Exception {
         HelloWorld helloWorld = new HelloWorld();
 
-        assertThat(helloWorld.hello("Don Jose"), is("Hola Don Jose"));
+        assertThat(helloWorld.hello("Don Jose"), is(not("Hola Don Jose")));
     }
 }

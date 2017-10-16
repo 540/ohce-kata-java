@@ -12,3 +12,11 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
 }
+
+test {
+    testLogging {
+        dependsOn cleanTest
+        testLogging.showStandardStreams = true
+        testLogging.exceptionFormat = 'full'
+    }
+}
