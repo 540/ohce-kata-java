@@ -24,7 +24,5 @@ public class CalculatorShould {
 
         assertThat(result, is(2));
     }
-
-
 }
 
