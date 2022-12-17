@@ -1,31 +1,27 @@
-# Java Testing boilerplate
+**ohce** is a console application that echoes the reverse of what you input through the console.
 
-This is a boilerplate ready to start working on programming good practices.
+Even though it seems a silly application, **ohce** knows a thing or two.
 
-## Properties
+1. When you start ohce, it greets you differently depending on the current time, but only in Spanish:
+  - Between 20 and 6 hours, **ohce** will greet you saying:  *¡Buenas noches < your name >!*
+  - Between 6 and 12 hours, **ohce** will greet you saying:  *¡Buenos días < your name >!*
+  - Between 12 and 20 hours, **ohce** will greet you saying:  *¡Buenas tardes < your name >!*
+2. When you introduce a palindrome, **ohce** likes it and after reverse-echoing it, it adds *¡Bonita palabra!*
+3. **ohce** knows when to stop, you just have to write *Stop!* and it'll answer *Adios < your name >* and end.
 
-Java version: 18
+This is an example of using **ohce** during the morning:
 
-Gradle version: 7.5
+    $ ohce Pedro
+    > ¡Buenos días Pedro!
+    $ hola
+    > aloh
+    $ oto
+    > oto
+    > ¡Bonita palabra!
+    $ stop
+    > pots
+    $ Stop!
+    > Adios Pedro
 
-Build project:
-- ./gradlew build
 
-  :warning: :warning: **Build will fail because of tests, this is done in purpose, have a look at them!**  
-
----
-
-- Get Java version:
-  - java --version
-
-- Update Java version:
-  - Download the JDK (version 17 right now)
-  - Remember to adjust Intellij settings File > Project Structure > Project
-
----
-
-- Get current Gradle version:
-    - ./gradlew --version
-    
-- Update Gradle version ([take in account project's Java version for compatibility](https://docs.gradle.org/current/userguide/compatibility.html)):
-    - ./gradlew wrapper --gradle-version <gradle-version>
+Credits: https://kata-log.rocks/ohce-kata
