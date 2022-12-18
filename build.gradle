@@ -1,9 +1,7 @@
-group 'com.deg540'
-version '1.0'
-
+apply plugin: 'application'
 apply plugin: 'java'
 
-sourceCompatibility = JavaVersion.VERSION_18
+group 'com.deg540'
 
 repositories {
     mavenCentral()
@@ -18,3 +16,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+run {
+    standardInput = System.in
+}
+
+mainClassName = 'com.deg540.tdd.OhceApplication'

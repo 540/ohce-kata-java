@@ -1,3 +1,8 @@
+## Ejecutar programa
+gradle run
+
+---
+
 **ohce** is a console application that echoes the reverse of what you input through the console.
 
 Even though it seems a silly application, **ohce** knows a thing or two.

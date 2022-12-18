@@ -35,35 +35,35 @@ public class OhceTest {
     void greetsInTheMorning() {
         when(timeProvider.getCurrentHour()).thenReturn(10);
 
-        String ocheOutput = ohce.run("Ohce Pedro");
+        String ocheResponse = ohce.run("Ohce Pedro");
 
-        assertEquals(Ohce.MORNING_GREETING+" Pedro", ocheOutput);
+        assertEquals(Ohce.MORNING_GREETING+" Pedro", ocheResponse);
     }
 
     @Test
     void greetsInTheAfternoon() {
         when(timeProvider.getCurrentHour()).thenReturn(16);
 
-        String ocheOutput = ohce.run("Ohce Pedro");
+        String ocheResponse = ohce.run("Ohce Pedro");
 
-        assertEquals(Ohce.AFTERNOON_GREETING+" Pedro", ocheOutput);
+        assertEquals(Ohce.AFTERNOON_GREETING+" Pedro", ocheResponse);
     }
 
     @Test
     void greetsAtNight() {
         when(timeProvider.getCurrentHour()).thenReturn(23);
 
-        String ocheOutput = ohce.run("Ohce Pedro");
+        String ocheResponse = ohce.run("Ohce Pedro");
 
-        assertEquals(Ohce.NIGHT_GREETING+" Pedro", ocheOutput);
+        assertEquals(Ohce.NIGHT_GREETING+" Pedro", ocheResponse);
     }
 
     @Test
     void stopsOhce() {
         ohce.run("Ohce Pedro");
 
-        String ocheOutput = ohce.run("Stop!");
+        String ocheResponse = ohce.run(Ohce.STOP_WORD);
 
-        assertEquals("Adiós Pedro", ocheOutput);
+        assertEquals("Adiós Pedro", ocheResponse);
     }
 }

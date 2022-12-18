@@ -5,6 +5,7 @@ public class Ohce {
     public static final String MORNING_GREETING = "Buenos días";
     public static final String AFTERNOON_GREETING = "Buenas tardes";
     public static final String PALINDROME_GREETING = "¡Bonita palabra!";
+    public static final String STOP_WORD = "Stop!";
     private final TimeProvider timeProvider;
     private String userName;
 
@@ -20,7 +21,7 @@ public class Ohce {
         if (isPalindrome(word)) {
             return word + " " + PALINDROME_GREETING;
         }
-        if (word.equals("Stop!")){
+        if (word.equals(STOP_WORD)){
             return "Adiós " + userName;
         }
 
